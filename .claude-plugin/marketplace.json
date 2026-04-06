@@ -11,11 +11,31 @@
   "plugins": [
     {
       "name": "document-skills",
-      "description": "将 EPUB 电子书从一种语言翻译为另一种语言，同时保持原始格式、章节结构和元数据完整",
+      "description": "文档生成技能，翻译EPUB电子书或生成xmind思维导图",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/epub-translator"
+        "./skills/epub-translator",
+        "./skills/xmind-generator"
+      ]
+    },
+    {
+      "name": "thought-skills",
+      "description": "思维相关技能，对文章/观点进行客观评估",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/assess"
+      ]
+    },
+    {
+      "name": "learn-skills",
+      "description": "学习技能，学习英语语法及其他",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/assess",
+        "./skills/xmind-generator"
       ]
     }
   ]
