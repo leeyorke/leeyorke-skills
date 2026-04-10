@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "leeyorke agent skills",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
@@ -34,8 +34,17 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/assess",
-        "./skills/xmind-generator"
+        "./skills/learn-english-grammar"
+      ]
+    },
+    {
+      "name": "explain-skills",
+      "description": "解释技能，解释概念和代码库",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/explain-concept",
+        "./skills/explain-codebase"
       ]
     }
   ]
