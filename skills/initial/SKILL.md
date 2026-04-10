@@ -1,18 +1,19 @@
 ---
 name: initial
-description: 分析当前代码库并自动生成CLAUDE.md文件，为未来的Claude Code实例提供项目操作指南。触发场景：用户输入/initial命令、新项目首次初始化、需要生成项目指南文件时使用。
+description: 分析当前代码库并用中文撰写CLAUDE.md文件，为未来的Claude Code实例提供项目操作指南。触发场景：用户输入/initial命令、新项目首次初始化、需要生成项目指南文件时使用。
 ---
 
 # /initial 命令使用说明
 ## 功能
-自动分析当前代码库的结构、构建流程、架构设计，生成标准化的CLAUDE.md文件，供后续Claude Code实例快速理解项目结构和开发流程。
+自动分析当前代码库的**结构**、**构建流程**、**架构设计**，生成标准化的CLAUDE.md文件，供后续Claude Code实例快速理解项目结构和开发流程。
 
 ## CLAUDE.md 要求规范
 ### 文件开头固定格式（必须严格遵循）
+
 ```markdown
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为 Claude Code (claude.ai/code) 在处理此存储库中的代码时提供指导。
 ```
 
 ### 必须包含的内容
@@ -35,10 +36,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 重要的设计决策和背后的原因
 - 项目特有的约定和规范
 
-### 禁止包含的内容
+### 禁止包含的内容（重要！）
 - 不要包含显而易见的通用开发实践（比如"写单元测试"、"不要提交敏感信息"等）
 - 不要包含可以通过简单搜索发现的文件结构细节
-- 不要重复README.md中已有的用户导向内容, 如果涉及其他文档，直接给出相对路径即可。
+- 不要重复README.md中已有的用户导向内容, 如果涉及其他文档，直接给出参考路径即可。
 - 不要包含模板化的通用内容，所有内容必须是本项目特有的
 
 ## 执行步骤
