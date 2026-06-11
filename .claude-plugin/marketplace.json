@@ -1,67 +1,19 @@
 {
-  "name": "leeyorke-agent-skills",
+  "name": "leeyorke-skills",
   "owner": {
     "name": "leeyorke",
     "email": "leeyorke@gmail.com"
   },
   "metadata": {
     "description": "leeyorke agent skills",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "plugins": [
     {
-      "name": "document-skills",
-      "description": "文档生成相关技能。翻译EPUB电子书",
-      "strict": false,
-      "skills": [
-        "./skills/epub-translator"
-      ]
-    },
-    {
-      "name": "tester-skills",
-      "description": "测试工程师相关技能。测试需求分析及思维导图生成",
-      "strict": false,
-      "skills": [
-        "./skills/test-requirement-analysis",
-        "./skills/xmind-generator"
-      ]
-    },
-    {
-      "name": "thought-skills",
-      "description": "思维相关技能。对文章/观点进行客观评估",
-      "strict": false,
-      "skills": [
-        "./skills/assess",
-        "./skills/clarify"
-      ]
-    },
-    {
-      "name": "learn-skills",
-      "description": "学习技能。学习英语语法、单词、论文及其他",
-      "strict": false,
-      "skills": [
-        "./skills/learn-english",
-        "./skills/ljg-paper"
-      ]
-    },
-    {
-      "name": "explain-skills",
-      "description": "解释技能，解释概念和代码库",
-      "strict": false,
-      "skills": [
-        "./skills/explain-concept",
-        "./skills/explain-codebase",
-        "./skills/understand"
-      ]
-    },
-    {
-      "name": "cladue-code",
-      "description": "claude code相关自定义技能。",
-      "strict": false,
-      "skills": [
-        "./skills/initial",
-        "./skills/session-save"
-      ]
+      "name": "leeyorke-skills",
+      "description": "Slow is smooth, and smooth is fast.",
+      "source": "./",
+      "strict": false
     }
   ]
 }
