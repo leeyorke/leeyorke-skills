@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "leeyorke agent skills",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "plugins": [
     {
@@ -34,7 +34,8 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/learn-english-grammar"
+        "./skills/learn-english",
+        "./skills/ljg-paper"
       ]
     },
     {
@@ -44,7 +45,8 @@
       "strict": false,
       "skills": [
         "./skills/explain-concept",
-        "./skills/explain-codebase"
+        "./skills/explain-codebase",
+        "./skills/understand"
       ]
     }
   ]
