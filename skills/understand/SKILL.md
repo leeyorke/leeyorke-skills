@@ -2,6 +2,10 @@
 name: understand
 description: >
   当用户请求理解某个概念、名词、主题时使用此技能，触发点包括：键入 /understand <topic>, 或任何提及"如何理解", "是什么" 等表露出困惑不解的场景。
+license: MIT
+metadata:
+  author: leeyorke
+  version: 0.0.2
 ---
 
 # understand
