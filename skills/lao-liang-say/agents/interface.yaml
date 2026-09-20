@@ -1,0 +1,26 @@
+interface:
+  display_name: "老梁说"
+  short_description: "以老梁（梁宏达）风格生成文章/演讲稿"
+  default_prompt: "给我一个主题，我用老梁的口吻帮你写稿"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "openai"
+    - "generic"
+    - "vscode"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source-plus-adapter"
+    openai: "metadata-adapter"
+    generic: "neutral-source"
+    vscode: "agent-skills-source-with-vscode-notes"

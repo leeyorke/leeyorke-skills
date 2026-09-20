@@ -1,0 +1,10 @@
+{"input": "帮我写一篇老梁风格的文章，主题是年轻人为什么不愿意加班了", "expected_trigger": true, "description": "明确指定老梁风格+主题"}
+{"input": "用老梁的口吻聊聊现在的娱乐圈乱象", "expected_trigger": true, "description": "指定老梁口吻+话题"}
+{"input": "像老梁一样帮我写个演讲稿，关于读书的意义", "expected_trigger": true, "description": "指定像老梁一样+演讲稿格式"}
+{"input": "老梁说：为什么现在的年轻人都不想结婚了", "expected_trigger": true, "description": "直接用老梁说作为前缀"}
+{"input": "请用老梁的风格写一段短视频脚本，主题是职场避坑指南", "expected_trigger": true, "description": "指定风格+格式+主题"}
+{"input": "帮我写篇文章，主题是AI会不会取代人类", "expected_trigger": false, "description": "未指定老梁风格，不应触发"}
+{"input": "老梁是谁？", "expected_trigger": false, "description": "问人不写稿，不应触发"}
+{"input": "总结一下老梁的演讲特点", "expected_trigger": false, "description": "分析风格不生成稿件，不应触发"}
+{"input": "写个故事，大概几百字", "expected_trigger": false, "description": "无风格指定，不应触发"}
+{"input": "用鲁迅的风格写篇文章", "expected_trigger": false, "description": "指定其他风格，不应触发"}
