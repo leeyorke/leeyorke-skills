@@ -1,0 +1,55 @@
+.admonition a {
+    text-decoration-line: none;
+    font-weight: bold;
+}
+
+.rss {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.rss-link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-decoration-line: none;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+
+
+/* ===== media ===== */
+.rss-image {
+  max-width: 40%;
+  display: block;
+  object-fit: cover;        /* ensure it fills while cropping */
+  object-position: center;  /* keep subject centered */
+}
+
+/* ===== text content ===== */
+.rss-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+
+a.rss-link h3.rss-title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a.rss-link p.rss-description {
+  padding: 0;
+  margin: 0;
+  font-size: small;
+  color: var(--muted-foreground);
+  font-weight: normal
+}
+
+
