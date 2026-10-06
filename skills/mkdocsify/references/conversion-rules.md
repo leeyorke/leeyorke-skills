@@ -80,6 +80,8 @@ readme  intro  overview  index  guide  about
 
 如果源文件里检出 YAML frontmatter（`---` 开头），会往 `markdown_extensions` 里插一个 `meta`。没有 frontmatter 就不插。原因：模板里没开 `meta`，mkdocs 会把 frontmatter 那几行当成正文渲染。
 
+`.python-version` 固定写入 `3.8.5`（一行，带换行结尾），不做探测、不给选项——保持和主题一样是固定契约。它只影响 pyenv / mise / uv 这类会读该文件的版本管理器，脚本自己建 venv 时仍走第 8 节的解释器选择顺序。
+
 ## 7. git 行为
 
 - 需要 PATH 上有 `git`；没有就跳过并告警，不视为失败。

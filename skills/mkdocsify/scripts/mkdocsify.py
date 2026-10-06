@@ -10,6 +10,7 @@ One folder in, one MkDocs project out:
                          mkdocs.yml          (shadcn theme, fixed)
                          requirements.txt    (pinned deps)
                          .gitignore
+                         .python-version     (pinned interpreter, 3.8.5)
                          .venv/              (Python virtualenv)
                          site/               (mkdocs build output)
 
@@ -54,6 +55,8 @@ for _stream in (sys.stdout, sys.stderr):
 VENV_DIRNAME = ".venv"
 BUILD_DIRNAME = "site"
 DOCS_DIRNAME = "docs"
+PYTHON_VERSION_FILE = ".python-version"
+PYTHON_VERSION = "3.8.5"
 
 # Directories that are never treated as source Markdown.
 IGNORED_DIRS = {
@@ -419,6 +422,13 @@ def write_gitignore(target):
     text = read_text(GITIGNORE_TEMPLATE)
     path = Path(target) / ".gitignore"
     write_text(path, text)
+    return path
+
+
+def write_python_version(target, version=PYTHON_VERSION):
+    """Pin the Python version so pyenv/mise/uv pick it up automatically."""
+    path = Path(target) / PYTHON_VERSION_FILE
+    write_text(path, version + "\n")
     return path
 
 
@@ -839,7 +849,7 @@ def main(argv=None):
             break
 
     # --- config -----------------------------------------------------------
-    step("config: writing mkdocs.yml, requirements.txt, .gitignore")
+    step("config: writing mkdocs.yml, requirements.txt, .gitignore, .python-version")
     frontmatter_present = has_frontmatter(sorted(docs_dir.rglob("*.md")))
     mkdocs_yml = write_mkdocs_yml(
         target,
@@ -858,8 +868,10 @@ def main(argv=None):
         requirements = read_text(src)
     write_requirements(target, requirements)
     write_gitignore(target)
+    write_python_version(target)
     ok(
-        "mkdocs.yml (theme: shadcn), requirements.txt, .gitignore written to project root"
+        "mkdocs.yml (theme: shadcn), requirements.txt, .gitignore, "
+        ".python-version (%s) written to project root" % PYTHON_VERSION
     )
 
     # --- python environment ----------------------------------------------

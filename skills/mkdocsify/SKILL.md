@@ -2,7 +2,7 @@
 name: mkdocsify
 description: 把一个文件夹里的 Markdown 文件转换成一套可立即构建的 MkDocs 项目：docs/ 目录 + static 资源 + mkdocs.yml（固定 shadcn 主题）+ requirements.txt 固定版本依赖 + .gitignore + git init 双层提交 + Python 虚拟环境。当用户说「把这些 md 做成 mkdocs 站点/项目」「用 mkdocs 发布这个文件夹」「转成 mkdocs」时使用。不要用于：往已有 mkdocs 项目里增删内容、配 CI 部署到 GitHub Pages/Netlify、把整个 Obsidian 仓库迁移、Hugo/VuePress/Docusaurus 等其他静态站生成器。
 metadata:
-  version: 0.0.1
+  version: 0.0.2
   requires:
     bins:
       - python
@@ -59,7 +59,7 @@ python "C:\Users\leeyorke\.claude\skills\mkdocsify\scripts\mkdocsify.py" <源文
 4. 把 Markdown 里引用的本地图片一并搬进 `docs/`
 5. 把 Obsidian `[[双链]]` 重写成 MkDocs 相对链接（按文件名匹配，兼容 `01-日常生活 A Day in the Life.md` ↔ `[[A Day in the Life]]`）
 6. 写出 `mkdocs.yml`（shadcn 主题，来自 `assets/mkdocs.yml` 模板）
-7. 写出 `requirements.txt` 和 `.gitignore`
+7. 写出 `requirements.txt`、`.gitignore` 和 `.python-version`（内容固定为 `3.8.5`，供 pyenv / mise / uv 等工具自动选用解释器）
 8. `git init`，先提交原始文件夹作为基线，转换完再提交一次
 9. 建 `.venv`，装固定版本依赖，补装 `mkdocs.yml` 里声明但没装的插件
 10. `mkdocs build --clean` 验证一遍
@@ -88,7 +88,7 @@ pymdown-extensions==10.15
 一次成功的执行应该交付：
 
 - 一个 `docs/` 目录，`index.md` 是首页，`static/` 有 logo 和样式
-- 根目录 `mkdocs.yml`（主题 `shadcn`）、`requirements.txt`、`.gitignore`
+- 根目录 `mkdocs.yml`（主题 `shadcn`）、`requirements.txt`、`.gitignore`、`.python-version`（内容 `3.8.5`）
 - 一个 `.venv/`，里面装着能跑的四件依赖
 - 一个 git 仓库，至少一条提交；原地转换时有两条（基线 + 转换后）
 - 一个通过 `mkdocs build` 的 `site/`
