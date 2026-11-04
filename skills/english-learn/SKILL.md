@@ -1,12 +1,12 @@
 ---
-name: learn-english
+name: english-learn
 description: |
-   对一段英语文本、单词进行翻译。在用户输入 [/learn-english] 或
+   对一段英语文本、单词进行翻译。在用户输入 [/english-learn] 或
    [请翻译这句话并解析语法]、[解析语法]、[翻译] 时触发。
 license: MIT
 metadata:
   author: leeyorke
-  version: 0.0.4
+  version: 0.0.5
 ---
 
 # Role
